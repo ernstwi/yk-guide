@@ -6,11 +6,19 @@
 * a usb-memory
 
 ### Installation 
-Make sure that `/opt/homebrew/bin` (if using an ARM Mac) or `/usr/local/bin` (x86) is in your `$PATH`.
+Make sure that `/opt/homebrew/bin` (if using an ARM Mac) or `/usr/local/bin` (x86) is before `/bin` in your `$PATH`. This should be the case with a standard Homebrew installation.
 
 1. `$ brew install ykman`
 2. `$ brew install pinentry-mac`
 3. `$ brew install gnupg`
+
+This guide assumes that you are using Bash. Note that this is not the default shell on macOS Catalina and forward.
+
+You can install an up-to-date version of Bash using Homebrew:
+
+1. `$ brew install bash`
+2. `$ sudo bash -c "echo $(which bash) >> /etc/shells"`
+3. `$ chsh -s $(which bash)`
 
 ### Create a more secure workspace
 1. `$ umask 077`
