@@ -160,7 +160,7 @@ ssb>  rsa4096 2021-05-28 [A] [expires: 2022-05-28]
 ### Enable SSH support
 `$ echo "enable-ssh-support" >> ~/.gnupg/gpg-agent.conf`
 
-`$ echo "pinentry-program /opt/homebrew/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf`
+`$ echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf`
 
 `$ echo "export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)" >> ~/.bash_profile`
 
